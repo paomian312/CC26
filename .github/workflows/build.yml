@@ -1,5 +1,5 @@
 name: Build CC26
-on: [push, workflow_dispatch]
+于: [push, workflow_dispatch]
 
 jobs:
   build:
@@ -9,7 +9,7 @@ jobs:
         uses: actions/checkout@v4
 
       - name: Setup Theos
-        uses: theos/theos-action@v3
+uses: Randomblock1/theos-action@v1
 
       - name: Build Tweak
         run: make package FINALPACKAGE=1
