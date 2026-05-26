@@ -1,6 +1,6 @@
 name: Build CC26
 
-on:
+于:
   push:
   workflow_dispatch:
 
@@ -15,7 +15,7 @@ jobs:
         uses: Randomblock1/theos-action@v1
 
       - name: Build Tweak
-        run: make package FINALPACKAGE=1
+        run: make package FINALPACKAGE=1 ROOTLESS=1
 
       - name: Upload Artifact
         uses: actions/upload-artifact@v4
