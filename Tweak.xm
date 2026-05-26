@@ -717,6 +717,3 @@ static void loadPreferences(CFNotificationCenterRef center, void *observer, CFSt
         %init(CC26)
     }
 }
-
-
-```
