@@ -1,6 +1,6 @@
 name: Build CC26
 
-于:
+on:
   push:
   workflow_dispatch:
 
@@ -15,10 +15,10 @@ jobs:
         uses: Randomblock1/theos-action@v1
 
       - name: Build Tweak
-        run: make package FINALPACKAGE=1 ROOTLESS=1
+        run: make package FINALPACKAGE=1 ROOTHIDE=1
 
       - name: Upload Artifact
         uses: actions/upload-artifact@v4
         with:
-          name: CC26-MyCleanVersion
+          name: CC26-RootHide
           path: packages/*.deb
